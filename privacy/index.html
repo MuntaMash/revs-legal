@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>REVS Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #f6f6f4;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      overflow-wrap: break-word;
+    }
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    p, li { font-size: 1rem; }
+    a { color: inherit; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    th { background: #ecece8; }
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1rem 0;
+    }
+    .table-scroll table { margin: 0; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>REVS Privacy Policy</h1>
+    <p><strong>Effective date:</strong> August 31, 2026</p>
+    <p>REVS (“REVS,” “we,” “us”) is a driving and road-memory app. This Privacy Policy explains how REVS handles information when you use the REVS application and related services.</p>
+    <p>This policy describes current REVS behavior as implemented in the REVS app for Android and iOS. It does not invent features that are not in the product.</p>
+    <p>You can open this information in REVS from <strong>Profile → Settings → Privacy &amp; Local Data → Privacy</strong>. If a hosted HTTPS policy URL has been configured for your build, REVS opens that page. Otherwise REVS shows an in-app summary of the same practices.</p>
+
+    <h2>1. Introduction</h2>
+    <p>REVS helps you discover, compose, navigate, record, and remember roads, and optionally share them with other REVS users.</p>
+    <p>Precise location is a core feature of navigation, live drive progress, and drive recording. Creating an account is optional for browsing and local use. An account is required to publish roads, comment, rate, follow creators, sync a Saved library, or submit a verified-drive proof.</p>
+    <p>REVS does not include advertising, payment processing, or child-specific features in the current product.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>REVS handles information in these ways:</p>
+    <ol>
+      <li><strong>Collected and stored by REVS</strong> — saved in REVS’s backend (currently Supabase) in connection with your account or public content.</li>
+      <li><strong>Processed temporarily to provide a feature</strong> — sent to a service so that feature can work (for example, coordinates sent to a mapping API to fetch directions). REVS does not keep a separate copy of that request as a location-history table.</li>
+      <li><strong>Stored only on this device</strong> — kept in local app storage until you reset local data, restore a backup, uninstall REVS, or (where the device operating system backs up app data) until that backup is removed.</li>
+      <li><strong>Sent directly to a third-party provider</strong> — requested by REVS from your device to that provider’s servers to deliver maps, directions, weather, or images.</li>
+    </ol>
+    <p>REVS does not collect information just because a library is included in the app. The sections below describe what the current product actually does.</p>
+
+    <h2>3. Account and Profile Information</h2>
+    <h3>Creating an account</h3>
+    <p>If you create a REVS account, you provide an <strong>email address</strong> and <strong>password</strong>. REVS sends those credentials to <strong>Supabase Auth</strong> over HTTPS so you can sign in. Email is used to sign in. It is <strong>not</strong> shown on your public REVS profile.</p>
+    <p>Depending on how the REVS authentication project is configured, you may need to confirm your email before the account is fully active. REVS does not currently offer in-app password reset or social sign-in (for example Google or Apple).</p>
+    <p>Session tokens needed to keep you signed in are held locally by the REVS client. Optional display name entered at sign-up is stored as account profile data.</p>
+    <h3>Public creator profile</h3>
+    <p>If you set them, these are visible to other people using REVS:</p>
+    <ul>
+      <li>display name</li>
+      <li>handle</li>
+      <li>bio (plain text, up to 160 characters)</li>
+      <li>Driver Mark (bundled REVS artwork you select)</li>
+      <li>profile photo, if you upload one</li>
+      <li>counts of published roads, verified roads, followers, and following</li>
+    </ul>
+    <p>Your email, password, Home Base, local Driver Passport, Saved library, and recorded GPS paths are <strong>not</strong> public profile fields.</p>
+    <h3>Local Driver Passport</h3>
+    <p>REVS also keeps a <strong>device-local</strong> Driver Passport (including a local passport ID such as <code>REVS-1234</code>, a local display name, and drive-history totals derived from recorded sessions on that device). That Passport is not uploaded as an account profile. It can differ from your public creator profile.</p>
+    <h3>Sign-out</h3>
+    <p>Sign-out ends the local session. <strong>Sign-out does not delete your account.</strong></p>
+
+    <h2>4. Location and Driving Data</h2>
+    <p>REVS uses <strong>precise location</strong> as a core feature. REVS does <strong>not</strong> request Always location permission.</p>
+    <p>Android does not request background location. An active drive uses a location foreground service after you tap Start Drive, with an ongoing “REVS Drive active” notice. On iPhone, REVS requests location <strong>When In Use</strong>. An already-started drive may continue receiving location while the app is in the background or the screen is locked. Apple’s system location indicator may be visible. Browsing Home, Explore, Profile, or Saved does <strong>not</strong> start that location stream. Tracking for an active drive stops when you End Drive.</p>
+    <p>Collecting location on this device is <strong>not</strong> the same as uploading it.</p>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Use</th>
+          <th>On this device?</th>
+          <th>Sent to REVS / Supabase?</th>
+          <th>Public?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nearby / Explore ranking</td>
+          <td>Uses the Home Base city you chose, or a local city estimate if you turn on current-location recommendation mode</td>
+          <td>City/anchor coordinates may be sent as a nearby query. Not a live GPS trace</td>
+          <td>The query is not a public profile field</td>
+        </tr>
+        <tr>
+          <td>Compose Drive origin</td>
+          <td>Optional live GPS when you choose current location as the origin</td>
+          <td>Sent to Mapbox Directions as the origin. Not stored by REVS as a location-history table</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Active Drive Mode</td>
+          <td>Yes. High-accuracy stream after Start Drive</td>
+          <td>Not uploaded continuously. A local checkpoint is kept on-device and cleared when the drive ends or is aborted</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Route recording</td>
+          <td>Yes. Recorded path files stay in app-private storage</td>
+          <td>Only if you later publish a recorded road (geometry, not raw accuracy or private notes) or submit a verified-drive proof</td>
+          <td>Published geometry is public</td>
+        </tr>
+        <tr>
+          <td>Drive verification</td>
+          <td>Built from the recorded path</td>
+          <td>Yes, if you submit proof: sanitized latitude, longitude, and timestamp points, plus session timing. No accuracy, private notes, email, or device identifiers</td>
+          <td>Verification status can be public. The raw proof path is not shown as a public map</td>
+        </tr>
+        <tr>
+          <td>Saved / replay</td>
+          <td>Local session and path stores</td>
+          <td>Cloud Saved library stores route keys and folders, not GPS traces</td>
+          <td>Saved library is private to your account</td>
+        </tr>
+        <tr>
+          <td>Home Base</td>
+          <td>Chosen from a preset city list and stored locally</td>
+          <td>Not a profile column</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Private route notes</td>
+          <td>On-device creator notes</td>
+          <td>Not included in publish or proof payloads</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Android Auto</td>
+          <td>Live position shown on the car display during an already-started drive</td>
+          <td>Not a separate upload</td>
+          <td>Visible in the vehicle, not on a public website</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p><strong>Current-location recommendations:</strong> turning this on does <strong>not</strong> start a live GPS session for ranking. REVS currently uses a local city estimate for that mode (not a continuous location stream).</p>
+    <p><strong>Navigation handoff:</strong> if you ask REVS to open another maps app, REVS may pass destination or route-end coordinates to Apple Maps, Google Maps, or the device default maps app. That happens only when you choose to leave REVS for that handoff.</p>
+
+    <h2>5. User-Generated Content</h2>
+    <h3>Published roads</h3>
+    <p>When you publish a road, REVS uploads to Supabase and makes it visible to the REVS community:</p>
+    <ul>
+      <li>name, location and country labels, and drive intent</li>
+      <li>public description or road story</li>
+      <li>route geometry points, distance, sectors, and Road DNA</li>
+      <li>optional hero image</li>
+      <li>creation source metadata (for example that the road was composed manually, imported from GPX, or recorded)</li>
+    </ul>
+    <p>Private draft fields are <strong>not</strong> included in the publish payload, including creator notes, local file paths, and source session IDs. Local drafts stay on this device until you publish.</p>
+    <p>If you publish again from the same local draft, REVS updates that published road rather than leaving the earlier version in place. The current product does <strong>not</strong> provide a separate “unpublish” control. Deleting your account removes your published roads.</p>
+    <h3>Photos</h3>
+    <p>You can choose <strong>photos from your library</strong> for an optional route hero image or an optional profile photo. REVS does not use the camera in the current product. Chosen images are uploaded to <strong>Supabase Storage</strong> when you add them. Local file paths are not sent.</p>
+    <p>REVS does <strong>not</strong> currently upload video to REVS servers.</p>
+    <p>You can replace or remove a route hero image you own, and you can change or remove your profile photo.</p>
+    <p>REVS may also <strong>read</strong> publicly available images from Wikimedia Commons (and may show map tiles from Carto when Mapbox tiles are not configured). Those are third-party reads, not uploads of your photos to REVS.</p>
+    <h3>GPX imports</h3>
+    <p>If you import a GPX file, REVS parses it on this device into a local draft. A GPX file may include elevation and timestamps. Published geometry includes coordinates and optional elevation; timestamps from the GPX file are not included in the publish payload.</p>
+    <h3>Comments, ratings, and follows</h3>
+    <ul>
+      <li><strong>Comments</strong> on published roads (plain text, up to 500 characters) are uploaded and visible to other REVS users, together with your public creator identity. You can edit or delete your own comments.</li>
+      <li><strong>Ratings</strong> (1–5) are uploaded. Community aggregates are visible. Verified-drive ratings have extra proof constraints. You can remove your own rating.</li>
+      <li><strong>Follow</strong> relationships are stored on your account. Follower and following <strong>counts</strong> appear on public creator profiles. You can unfollow.</li>
+      <li>You can <strong>report a comment</strong>. Reports are private (reason such as spam, harassment, unsafe, off-topic, or other). Reports do <strong>not</strong> automatically hide the comment. Ordinary users cannot read report rows.</li>
+    </ul>
+    <p>REVS does not currently provide in-app reporting for published roads, photos, profiles, bios, or ratings, and does not include a public moderator console.</p>
+    <h3>Saved library</h3>
+    <p>When you are signed in, saved roads and folders can sync to your account. That library stores route keys and folders. It does <strong>not</strong> store GPS traces. It is private to your account, not a public profile field.</p>
+    <h3>Local-only creations</h3>
+    <p>These stay on this device unless you later publish a related road or export a backup:</p>
+    <ul>
+      <li>drafts and local (unpublished) routes</li>
+      <li>route moments and captions, including photos you attach to a moment</li>
+      <li>Road Comms reports (local road notes such as surface or hazard notes)</li>
+      <li>completed-drive memories used in local activity</li>
+    </ul>
+
+    <h2>6. Device and Technical Information</h2>
+    <p>REVS stores on this device, using local app storage (including SharedPreferences and app-private files):</p>
+    <ul>
+      <li>Home Base and onboarding preferences</li>
+      <li>driver settings (units, maps-app preference, voice guidance, which defaults to <strong>off</strong>)</li>
+      <li>local Saved overlay, drafts, local routes, moments, Road Comms, and folders</li>
+      <li>local Driver Passport identity</li>
+      <li>recorded drive session metadata and GPS path files</li>
+      <li>an active-drive checkpoint while a drive is in progress</li>
+      <li>cached scenic-image lookup results</li>
+    </ul>
+    <p>Network requests to REVS and to third-party providers necessarily include ordinary technical metadata visible to the receiving server (for example IP address, and an app identifier such as <code>com.revs.revs</code> on map tile requests). REVS does not implement a REVS-side advertising ID, device-ID collection, or analytics SDK.</p>
+    <p><strong>Voice guidance</strong> uses on-device text-to-speech when you turn it on. Connecting Android Auto does not turn voice guidance on.</p>
+    <p><strong>Notifications:</strong> on Android, REVS may show an ongoing “REVS Drive active” notice while a drive you started is tracking. That is a local operating-system notice for the location foreground service. REVS does not implement marketing push notifications or a push-messaging service in the current product.</p>
+    <p><strong>Sharing and backups:</strong> if you share a route or road memory, REVS offers a short text summary through the device share sheet (or copies it). If you export a REVS backup, REVS shares a local JSON file that can include saved roads, drafts, notes, folders, preferences, and local Passport identity. Keep backup files somewhere you trust. Exported backups are not uploaded to REVS by that export action. Recorded GPS path files are stored separately from that backup file.</p>
+    <p><strong>Android Auto:</strong> during an active drive, REVS can project the route and live position to a connected car display. That is presentation of a drive you already started, not a new upload category.</p>
+
+    <h2>7. How REVS Uses Information</h2>
+    <p>REVS uses the information described above to:</p>
+    <ul>
+      <li>create and maintain your account and keep you signed in</li>
+      <li>show your public creator identity to other REVS users</li>
+      <li>publish, discover, and navigate roads</li>
+      <li>provide turn-by-turn guidance, live progress, recording, and drive verification</li>
+      <li>sync your private Saved library</li>
+      <li>enable comments, ratings, follows, and comment reports</li>
+      <li>remember local preferences, drafts, and Driver Passport history on this device</li>
+      <li>operate Android Auto projection for an already-started drive</li>
+    </ul>
+    <p>REVS does <strong>not</strong> currently use this information for advertising, payment processing, or selling personal information.</p>
+
+    <h2>8. Service Providers and Third Parties</h2>
+    <p>REVS uses the following providers in the current implementation. Each receives only what is needed to provide the listed function. This policy does not reproduce those providers’ own privacy policies.</p>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Provider</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Supabase</td><td>Account authentication, profiles, published roads, media storage, comments, ratings, follows, Saved library, drive-verification proofs, and comment reports</td></tr>
+        <tr><td>Mapbox</td><td>Maps and map tiles, directions, geocoding, elevation, traffic, and related map queries used for route generation and navigation</td></tr>
+        <tr><td>Open-Meteo</td><td>Route weather, using coordinates needed to fetch a forecast</td></tr>
+        <tr><td>Wikimedia Commons</td><td>Optional scenic image lookups (reads, not uploads of your photos)</td></tr>
+        <tr><td>Carto</td><td>Fallback map tiles when Mapbox tiles are not configured</td></tr>
+        <tr><td>Apple Maps / Google Maps / device maps</td><td>Only if you choose navigation handoff out of REVS</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>The REVS app is not given a Supabase service-role key or database password. Client-safe publishable/anon keys and a public Mapbox token are compiled into the app so those features can work.</p>
+    <p>Whether a provider logs full request coordinates, and for how long, is governed by that provider’s own practices. This policy does not claim those facts from REVS source code.</p>
+
+    <h2>9. Map and Navigation Providers</h2>
+    <p>Mapbox is the primary map and navigation provider. REVS may send coordinates and route geometry to Mapbox to display maps, geocode a destination you type, request driving directions and guidance, estimate elevation, consider traffic, and query nearby road context used in route generation.</p>
+    <p>Open-Meteo receives coordinates along a route to return weather.</p>
+    <p>These requests are made to provide the feature you are using. REVS does not store a Mapbox or Open-Meteo query log in the REVS database.</p>
+
+    <h2>10. Data Sharing</h2>
+    <p>REVS shares information as follows:</p>
+    <ul>
+      <li><strong>With other REVS users</strong>, when you publish a road, set a public profile, comment, rate, follow, or earn a public verification status.</li>
+      <li><strong>With service providers</strong> listed above, to operate the app.</li>
+      <li><strong>With another maps app</strong>, only if you choose navigation handoff.</li>
+      <li><strong>With an app or person you select</strong>, if you use the device share sheet or export a backup.</li>
+    </ul>
+    <p>REVS source code does <strong>not</strong> implement sale of personal information, advertising networks, attribution SDKs, tracking pixels, or cross-app tracking. The iOS privacy manifest declares that REVS does not track.</p>
+    <p>Whether a legal regime treats processor use as “sharing” or “sale” is a legal determination not made in this policy.</p>
+
+    <h2>11. Data Retention</h2>
+    <p>REVS does not currently promise a numbered retention period in product copy.</p>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Information</th><th>What the product does</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Local app data</td><td>Remains on this device until you use Reset Local REVS Data, restore a backup, uninstall REVS, or (if the operating system backs up app data) until that backup is removed</td></tr>
+        <tr><td>Recorded drive sessions and GPS path files</td><td>Stored on this device in a separate local store from the Reset Local REVS Data blob. They remain until removed by that store, uninstall, or an equivalent device wipe. Account deletion does <strong>not</strong> erase them</td></tr>
+        <tr><td>Active-drive checkpoint</td><td>On-device; cleared when the drive ends or is aborted</td></tr>
+        <tr><td>Account, profile, published roads, comments, ratings, follows, Saved library, and verification proofs</td><td>Persist until you delete the account (or an equivalent authenticated deletion)</td></tr>
+        <tr><td>Supabase Storage images you uploaded</td><td>Remain until you replace or remove them, or until account deletion removes owned objects under your user id. Physical file removal may finish after the account is already deleted</td></tr>
+        <tr><td>Comment reports</td><td>Stored as private rows. They are removed if the comment or the reporter account is deleted. No separate retention schedule is implemented</td></tr>
+        <tr><td>Third-party provider logs</td><td>Not controlled by REVS source code</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Device or cloud backups created by Android, iOS, or by you exporting a REVS backup file are outside REVS’s in-app deletion. REVS cannot delete a file you already shared or saved elsewhere.</p>
+
+    <h2>12. Account and Data Deletion</h2>
+    <h3>How to delete your account in REVS</h3>
+    <p>If you are signed in, you can delete your account from:</p>
+    <p><strong>Profile → Settings → Account → Delete Account</strong></p>
+    <p>You must enter your password to confirm. You cannot delete the account while a drive is active. Sign-out is not deletion.</p>
+    <p>Deletion is permanent. REVS calls a server function that identifies you from your signed-in session only. The app never asks you to type another user’s id, and the app never holds an administrator credential.</p>
+    <h3>What account deletion removes</h3>
+    <p>When deletion succeeds, REVS removes:</p>
+    <ul>
+      <li>your authentication account</li>
+      <li>your private profile row and public creator identity (display name, handle, bio, Driver Mark, avatar metadata)</li>
+      <li>your published roads and related Road DNA, sectors, and route-media metadata</li>
+      <li>owned images in REVS storage under your user id (<code>route-media</code> and <code>profile-media</code>)</li>
+      <li>your comments, ratings, and verified-drive proofs (including sanitized driven-path points)</li>
+      <li>follow relationships in both directions</li>
+      <li>your cloud Saved library (saves, folders, and memberships)</li>
+      <li>comment reports you submitted</li>
+    </ul>
+    <p>Rating totals and follower/following counts are recalculated after those rows are gone.</p>
+    <h3>What account deletion does not remove</h3>
+    <ul>
+      <li><strong>On this device:</strong> Driver Passport, recorded drive sessions and GPS paths, drafts, local routes, moments, Road Comms, onboarding, and driver preferences. These are device-owned. Reset Local REVS Data, uninstall, or a device wipe is required to clear local app data. Reset Local REVS Data clears saved roads, drafts, folders, notes, and preferences stored in that local store; it does not delete your REVS account.</li>
+      <li>Signed-out local bookmarks that were never part of the cloud Saved library.</li>
+      <li>Other users’ accounts, roads, comments, ratings, and images.</li>
+      <li>Other users’ Saved bookmarks of a road that no longer exists (REVS omits missing roads rather than keeping a public copy of your content).</li>
+      <li>Backups you exported, operating-system backups, and copies held in another maps app or share destination you chose.</li>
+    </ul>
+    <p>If deletion cannot be completed, your account remains and you stay signed in. If the account is deleted but a later local cleanup step fails, REVS still signs you out locally so you are not left in a fake signed-in state.</p>
+    <p>Physical removal of storage files may complete shortly after the account is deleted. REVS does not claim instantaneous erasure of every disk replica.</p>
+    <p>REVS does <strong>not</strong> currently promise that the same email can be reused immediately after deletion.</p>
+    <p>A separate public web deletion page is <strong>not</strong> hosted yet. In-app deletion is the method implemented today.</p>
+
+    <h2>13. Security</h2>
+    <p>REVS sends account and community traffic to its backend over HTTPS. The Android app is configured not to allow cleartext (non-HTTPS) traffic.</p>
+    <p>Access to your account data on the server uses your signed-in identity. Other users see only public profile and public community content.</p>
+    <p>This policy does <strong>not</strong> claim that all data is encrypted at rest on every system involved, because that is not proven from the REVS application repository.</p>
+    <p>Keep your password confidential. REVS will not ask for it except to sign in or to confirm account deletion.</p>
+
+    <h2>14. Your Choices and Permissions</h2>
+    <p>You can:</p>
+    <ul>
+      <li>use much of REVS without creating an account</li>
+      <li>decline or revoke location permission in system settings (navigation, recording, and current-location origin will not work without it)</li>
+      <li>End Drive to stop the active-drive location stream</li>
+      <li>leave voice guidance off (the default)</li>
+      <li>deny Android’s notification permission (a drive can still start; the ongoing notice may not appear)</li>
+      <li>edit or delete your own comments, ratings, follows, profile fields, and photos as described above</li>
+      <li>export or restore a local backup</li>
+      <li>reset local REVS data or reset onboarding</li>
+      <li>delete your account as described above</li>
+      <li>uninstall REVS to remove remaining app files on that device, subject to any operating-system backup</li>
+    </ul>
+
+    <h2>15. Children</h2>
+    <p>REVS is intended for users age 13 and older. REVS is not intended for children under 13.</p>
+    <p>REVS does not include child-specific features and does not implement an age gate.</p>
+    <p>Users under the applicable digital-consent age in their jurisdiction may require parental or guardian involvement where legally required.</p>
+
+    <h2>16. International processing</h2>
+    <p>REVS is an internet-connected app. REVS relies on third-party service providers listed above, including Supabase for account and community data, and map, weather, and image providers. Those providers may process information in the locations where they operate.</p>
+    <p>This policy does not claim a specific backend country, data center, or transfer mechanism.</p>
+
+    <h2>17. Changes to This Policy</h2>
+    <p>REVS may update this Privacy Policy as the service changes. When the policy is updated, the Effective Date will also be updated. Additional notice may be provided when required by applicable law or when a change materially affects users.</p>
+    <p>The current policy will be available from <strong>Profile → Settings → Privacy &amp; Local Data → Privacy</strong>, and from the hosted HTTPS page once one is published.</p>
+
+    <h2>18. Contact</h2>
+    <p>Questions about this policy or REVS privacy practices:</p>
+    <p>
+      <strong>REVS</strong><br>
+      Privacy contact: <a href="mailto:REVSPrivacy@outlook.com">REVSPrivacy@outlook.com</a>
+    </p>
+  </main>
+</body>
+</html>
