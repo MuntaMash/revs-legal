@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REVS Account &amp; Data Deletion</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #f6f6f4;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      overflow-wrap: break-word;
+    }
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    p, li { font-size: 1rem; }
+    a { color: inherit; }
+    .lede {
+      font-size: 1.05rem;
+    }
+    .paths {
+      display: grid;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1.1rem 1.15rem 1.2rem;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    .path-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .cta {
+      display: inline-block;
+      margin: 0.75rem 0 0.35rem;
+      padding: 0.85rem 1.15rem;
+      background: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .cta:focus {
+      outline: 3px solid #888;
+      outline-offset: 2px;
+    }
+    .note {
+      font-size: 0.95rem;
+    }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 2rem 0; }
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #ecece8;
+        background: #161616;
+      }
+      .card {
+        background: #222;
+        border-color: #3a3a3a;
+      }
+      .cta {
+        background: #ecece8;
+        color: #161616;
+      }
+      hr { border-top-color: #3a3a3a; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>REVS Account &amp; Data Deletion</h1>
+    <p class="lede">You can delete your REVS account in the app, or request deletion by email if you do not have access to REVS. Signing out is not the same as deleting your account.</p>
+
+    <div class="paths">
+      <section class="card" aria-labelledby="in-app-heading">
+        <span class="path-label">Path 1</span>
+        <h2 id="in-app-heading">In the REVS app</h2>
+        <p>If you can open REVS and are signed in:</p>
+        <p><strong>Profile → Settings → Account → Delete Account</strong></p>
+        <p>Confirm the deletion in the app. REVS asks for your password only as in-app confirmation. You cannot delete the account while a drive is active.</p>
+      </section>
+
+      <section class="card" aria-labelledby="email-heading">
+        <span class="path-label">Path 2</span>
+        <h2 id="email-heading">Without access to the app</h2>
+        <p>You do not need to reinstall or reopen REVS. Send a deletion request from the email address associated with your REVS account when possible.</p>
+        <p>
+          <a class="cta" href="mailto:REVSPrivacy@outlook.com?subject=REVS%20Account%20Deletion%20Request">Email a deletion request</a>
+        </p>
+        <p class="note">Opens mail to <a href="mailto:REVSPrivacy@outlook.com?subject=REVS%20Account%20Deletion%20Request">REVSPrivacy@outlook.com</a> with the subject <strong>REVS Account Deletion Request</strong>.</p>
+        <p>Do <strong>not</strong> include your password. REVS does not need your password, location history, GPS files, government ID, or payment details to receive this request.</p>
+        <p>If you send the request from a different email address, include the email used for your REVS account. REVS may need reasonable verification that the request belongs to that account before deleting it.</p>
+      </section>
+    </div>
+
+    <h2>What account deletion removes</h2>
+    <p>When a REVS account is deleted, REVS removes account-associated cloud data, including:</p>
+    <ul>
+      <li>your authentication account</li>
+      <li>your private profile and public creator identity (display name, handle, bio, Driver Mark, and avatar metadata)</li>
+      <li>your published roads and related Road DNA, sectors, and route-media metadata</li>
+      <li>images you uploaded that are stored under your account</li>
+      <li>your comments, ratings, and verified-drive proofs</li>
+      <li>follow relationships in both directions</li>
+      <li>your cloud Saved library (saves, folders, and memberships)</li>
+      <li>comment reports you submitted</li>
+    </ul>
+    <p>Rating totals and follower/following counts are recalculated after those records are gone. Physical removal of uploaded images from storage may finish after the account itself is already deleted. Deletion is permanent. REVS does not currently promise that the same email can be reused immediately afterward.</p>
+
+    <h2>What may remain on your device</h2>
+    <p>Account deletion removes REVS cloud/account data. It does <strong>not</strong> erase information that exists only on your device, and REVS servers do not keep a copy of that local-only data in order to retain it after deletion.</p>
+    <p>Local-only information that may remain physically on a device includes:</p>
+    <ul>
+      <li>Driver Passport information</li>
+      <li>recorded drive sessions and GPS path files</li>
+      <li>drafts, local routes, moments, and Road Comms notes</li>
+      <li>onboarding and driver preferences</li>
+      <li>signed-out local bookmarks that were never part of the cloud Saved library</li>
+    </ul>
+    <p>Other people’s accounts, roads, comments, ratings, and images are not removed. If someone else saved one of your roads, that leftover bookmark no longer shows a public copy of your content.</p>
+    <p>Backups you exported, operating-system backups, and copies you already shared or saved elsewhere are outside REVS account deletion.</p>
+
+    <h3>If you want local files removed</h3>
+    <p>To clear saved roads, drafts, folders, notes, and preferences stored in REVS local data, use <strong>Profile → Settings → Privacy &amp; Local Data → Reset Local REVS Data</strong>. That action does not delete your REVS account. It also does not erase recorded drive sessions and GPS path files, which are stored separately on the device.</p>
+    <p>Uninstalling REVS, or an equivalent device wipe, removes remaining REVS app files on that device, subject to any operating-system backup.</p>
+
+    <h2>Processing</h2>
+    <p>In-app deletion, once confirmed, uses the signed-in REVS session to delete that account. If deletion cannot be completed, the account remains.</p>
+    <p>We will process verified deletion requests as required by applicable policy and law. REVS does not currently publish a numbered processing time or backup-retention period.</p>
+
+    <h2>Privacy</h2>
+    <p>How REVS handles information is described in the <a href="https://muntamash.github.io/revs-legal/privacy/">REVS Privacy Policy</a>.</p>
+
+    <hr>
+    <h2>Contact</h2>
+    <p>
+      <strong>REVS</strong><br>
+      Privacy contact: <a href="mailto:REVSPrivacy@outlook.com">REVSPrivacy@outlook.com</a>
+    </p>
+  </main>
+</body>
+</html>
